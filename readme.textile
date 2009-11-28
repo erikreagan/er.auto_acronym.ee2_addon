@@ -1,0 +1,42 @@
+h1. Notice
+
+This plugin was written for a tutorial on net.tutsplus.com. It is not meant to be a plugin used on sites as it only has a minimal dictionary of acronyms. You can, however, add your own in and use it as you wish. The plugin was written for compatibility with ExpressionEngine 1.6.x. This version is compatible with ExpressionEngine 2.x.
+
+by <a href="http://erikreagan.com">Erik Reagan</a>
+
+h2. Instructions
+
+Copy the *auto_acronym* directory into your system/expressionengine/third_party directory
+
+h2. Usage
+
+The "dictionary" of acronyms is stored in an array within the plugins/pi.auto_acronym.php file.
+
+Automatically turn a string into an HTML acronym if it is within our acronym dictionary. You can do this with individual words or large blocks of text.
+
+
+h3. Simple Example
+
+<pre>
+{exp:auto_acronym data="HTML"}
+</pre>
+This outputs:
+<pre><acronym title="Hypertext Markup Language">HTML</acronym> in your ExpressionEngine template.</pre>
+
+
+h3. Large Block Example
+
+<pre>
+{exp:auto_acronym}
+
+<p>My name is Erik and I am an addict. I stay up late into the night marking up HTML and CSS with magical alignment.
+Whitespace speaks volumes of my care and finesse of the code. My RSS subscribers wait on their toes for my next
+example of code beauty. Okay...not really.</p>
+
+{/exp:auto_acronym}
+</pre>
+
+This outputs:
+<p>My name is Erik and I am an addict. I stay up late into the night marking up <acronym title="Hypertext Markup Language">HTML</acronym> and <acronym title="Cascading Style Sheets">CSS</acronym> with magical alignment.
+Whitespace speaks volumes of my care and finesse of the code. My <acronym title="Really Simple Syndication">RSS</acronym> subscribers wait on their toes for my next
+example of code beauty. Okay...not really.</p>
