@@ -32,12 +32,6 @@ class Auto_acronym
       // We need the template class to help us with the plugin
       $this->EE =& get_instance();
 
-      echo "<pre>";
-      print_r($this->EE);
-      echo "</pre>";
-      exit;
-      
-
       // First we grab the data we are working with. It's either a value within the tag or the text between the open & close tag
       $data = ($this->EE->TMPL->fetch_param('data')) ? $this->EE->TMPL->fetch_param('data') : $this->EE->TMPL->tagdata ;
       
